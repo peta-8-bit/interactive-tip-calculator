@@ -14,28 +14,56 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
     <link rel="stylesheet" href="src/scss/main.scss" />
-    <script src="src/js/app.js"></script>
+    <script src="src/js/app.js" defer></script>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
     </style>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <div class="container">
+      <div class="wrapper">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Image of Logo">
+      </div>
+      <main>
+        <div class="first">
+          <div class="bill">
+            Bill
+          </div> 
 
-    <div class="attribution">
+          <div class="select-tip">
+            Select Tip % 
+          </div>
+
+          <div class="button-group">
+            <div class="5">5%</div>
+            
+            <div class="10">10%</div>
+
+            <div class="15">15%</div>
+            
+            <div class="25">25%</div>
+
+            <div class="50">50%</div>
+            
+            <div class="custom">Custom</div>
+          </div>
+          Number of People 
+        </div>
+        <div class="second">
+          Tip Amount 
+          /person 
+          Total 
+          /person 
+          Reset
+        </div>
+      </main>
+    </div>
+  </div>
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
