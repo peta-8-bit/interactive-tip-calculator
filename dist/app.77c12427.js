@@ -118,7 +118,57 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/js/app.js":[function(require,module,exports) {
-console.log("Success!!");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+var bill, custom, tip, tipamt, NOP;
+var TAPP = document.querySelector(".TAPP");
+var ToAPP = document.querySelector(".ToAPP");
+var cstval = document.querySelector("input[name=customvalue]");
+getBill = function getBill() {
+  bill = parseInt(document.querySelector("input[name=bill]").value);
+  console.log("BILL:" + bill);
+  calculation();
+};
+getNop = function getNop() {
+  NOP = parseInt(document.querySelector("input[name=NOP]").value);
+  console.log("NOP:" + NOP);
+  calculation();
+};
+getCustom = function getCustom() {
+  custom = document.querySelector("input[name=select]:checked").value;
+  console.log("custom:" + custom);
+  console.log("TYPE custom:" + _typeof(custom));
+  if (custom !== "custom") {
+    tip = parseInt(custom);
+    console.log("Radio TIP:" + tip);
+    calculation();
+  } else {
+    if (cstval.disabled === false) {
+      cstval.disabled = true;
+    } else {
+      cstval.disabled = false;
+    }
+  }
+};
+customTip = function customTip() {
+  tip = parseInt(cstval.value);
+  console.log("Custom TIP():" + tip);
+  calculation();
+};
+calculation = function calculation() {
+  console.log("*********");
+  console.log("BILL:" + bill + _typeof(bill));
+  console.log("NOP:" + NOP + _typeof(NOP));
+  console.log("TIP:" + tip + _typeof(tip));
+  console.log("@@@@@@@@@@");
+  if (bill !== NaN && tip !== NaN && NOP !== NaN && bill !== undefined && NOP !== undefined && tip !== undefined) {
+    TAPP.textContent = bill * (tip / 100) / NOP;
+    ToAPP.textContent = (bill + bill * (tip / 100)) / NOP;
+    if (custom === "custom") {
+      document.querySelector("input[name=customvalue]").disabled = true;
+    }
+  }
+};
+// Remove value from form after submitting || onchange || onclick
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -144,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65125" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64788" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

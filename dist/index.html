@@ -21,35 +21,58 @@
       </div>
       <main>
         <div class="first">
-          <div class="bill">
-            Bill
-          </div> 
+          <form>
+            <div class="bill">
+              <label for="bill">Bill</label><br>
+              <input type="text" name="bill" id="bill" oninput="getBill()">
+            </div> 
 
-          <div class="select-tip">
-            Select Tip % 
-          </div>
+            <div class="select-tip">
+              <label for="tip%">Select Tip % </label><br>
+            </div>
 
-          <div class="button-group">
-            <div class="5">5%</div>
-            
-            <div class="10">10%</div>
+            <div class="button-group">
+              
+              <input type="radio" name="select" id="5%" value="5" onclick="getCustom()">
+              <label for="5%">5%</label>
 
-            <div class="15">15%</div>
-            
-            <div class="25">25%</div>
+              <input type="radio" name="select" id="10%" value="10" onclick="getCustom()">
+              <label for="10%">10%</label>
 
-            <div class="50">50%</div>
-            
-            <div class="custom">Custom</div>
-          </div>
-          Number of People 
+              <input type="radio" name="select" id="15%" value="15" onclick="getCustom()"> 
+              <label for="15%">15%</label>
+
+              <input type="radio" name="select" id="25%" value="25" onclick="getCustom()">
+              <label for="25%">25%</label>
+
+              <input type="radio" name="select" id="50%" value="50" onclick="getCustom()">
+              <label for="50%">50%</label>
+
+              <input type="radio" name="select" id="custom" value="custom" onclick="getCustom()">
+              <label for="custom">Custom</label>
+
+              <input disabled="" type="text" name="customvalue" id="customvalue" placeholder="Custom" onchange="customTip()">
+            </div>
+
+            <div>
+              <label for="NOP">Number of People</label><br>
+              <input type="text" name="NOP" id="NOP" oninput="getNop()">
+            </div>
+          </form>
         </div>
         <div class="second">
-          Tip Amount 
-          /person 
-          Total 
-          /person 
-          Reset
+          <div class="twofirst">
+            Tip Amount 
+            /person 
+            <span class="TAPP"></span>
+          </div>
+          <div class="Twosecond">
+            Total 
+            /person 
+            <span class="ToAPP"></span>
+          </div>
+          
+          <button>Reset</button>
         </div>
       </main>
     </div>

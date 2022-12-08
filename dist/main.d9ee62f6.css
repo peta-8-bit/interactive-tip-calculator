@@ -7,10 +7,11 @@
 }
 
 body {
-  background-color: hsl(184deg, 14%, 56%);
+  background-color: hsl(185deg, 41%, 84%);
   color: #eee;
   display: grid;
   place-items: center;
+  font-size: 18px;
 }
 
 .container {
@@ -18,17 +19,73 @@ body {
   width: 80%;
   display: grid;
   place-items: center;
+  outline: 3px red solid;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  outline: 3px blue solid;
+  height: 100vh;
+  justify-content: flex-start;
 }
 
 .logo {
   display: grid;
   place-items: center;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 main {
   background-color: #eee;
   color: hsl(183deg, 100%, 15%);
+  padding: 1.5em;
+}
+@media (min-width: 650px) {
+  main {
+    display: flex;
+  }
+}
+
+input[type=text] {
+  border: none;
+  background-color: hsl(185deg, 41%, 84%);
+  margin-bottom: 2em;
+  margin-left: 50%;
+  margin-right: auto;
+  transform: translateX(-50%);
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.button-group label {
+  width: 6em;
+  height: 2.5em;
+  display: inline-block;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  margin: 3px;
+  flex-basis: 1;
+}
+
+.TAPP {
+  display: inline-block;
+  outline: 1px purple solid;
+  width: 100px;
+  height: 20px;
+}
+
+.ToAPP {
+  outline: 1px purple solid;
+  width: 100px;
+  height: 20px;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
